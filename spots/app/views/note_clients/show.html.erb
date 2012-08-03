@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Client:</b>
+  <%= @note_client.client %>
+</p>
+
+<p>
+  <b>Fecha:</b>
+  <%= @note_client.fecha %>
+</p>
+
+<p>
+  <b>Comentario:</b>
+  <%= @note_client.comentario %>
+</p>
+
+
+<%= link_to 'Edit', edit_note_client_path(@note_client) %> |
+<%= link_to 'Back', note_clients_path %>

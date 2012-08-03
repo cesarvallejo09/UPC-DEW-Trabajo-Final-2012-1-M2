@@ -1,0 +1,42 @@
+<%= form_for(@doctor) do |f| %>
+  <% if @doctor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@doctor.errors.count, "error") %> prohibited this doctor from being saved:</h2>
+
+      <ul>
+      <% @doctor.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<table class="tabla_repeater">
+	<tr>
+	    <th><%= f.label :nombre %></th>
+	    <td><%= f.text_field :nombre %></td>
+	</tr>
+	<tr>
+	    <th><%= f.label :apellido %></th>
+	    <td><%= f.text_field :apellido %></td>
+	</tr>
+	<tr>
+	    <th><%= f.label :correo %></th>
+	    <td><%= f.text_field :correo %></td>
+	</tr>
+	<tr>
+	    <th><%= f.label :telefono %></th>
+	    <td><%= f.text_field :telefono %></td>
+	</tr>
+	<tr>
+	    <th><%= f.label :administrador %></th>	    
+	    <td><%= f.select :administrador, %W(Si No).collect{|op| [op,op]}, :prompt => "--Seleccione--" %></td>
+	</tr>	
+	<tr>
+	    <th>Usuario</th>
+	    <td><%= f.text_field :user %></td>
+	</tr>
+	<tr>		
+		<td colspan="2" align="center"><%= f.submit %></td>
+	</tr>
+<% end %>

@@ -1,0 +1,57 @@
+<p id="notice"><%= notice %></p>
+
+<table class="tabla_repeater">
+	<tr>
+		<th>Nombre: </th>
+		<td><%= @client.nombre %></td>		
+	</tr>
+	<tr>
+		<th>Apellido:</th>
+		<td><%= @client.apellido %></td>		
+	</tr>
+	<tr>
+		<th>Nro ruc:</th>
+		<td><%= @client.nro_ruc %></td>		
+	</tr>
+	<tr>
+		<th>Correo:</th>
+		<td><%= @client.correo %></td>		
+	</tr>
+	<tr>
+		<th>Direccion:</th>
+		<td><%= @client.direccion %></td>		
+	</tr>
+	<tr>
+		<th>Imagen:</th>
+		<td><%= @client.imagen %></td>		
+	</tr>		
+	<tr>
+		<th>Telefono:</th>
+		<td><%= @client.telefono %></td>		
+	</tr>	
+	<tr>
+		<th>Celular:</th>
+		<td><%= @client.celular %></td>		
+	</tr>
+	<tr>
+		<th>Lista de pacientes: </th>
+		<td>
+			<ul>
+			  <% @client.patients.each do |patient| %>
+			  <li><%= patient.raza %></li>
+			  <%end%>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<td colspan= "2" align="center">
+			<%= link_to edit_client_path(@client) do %>
+			  <%= image_tag("b_edit.png", :alt => 'Editar cliente', :border => 0) %> Editar
+			<% end %> 
+			|			
+			<%= link_to clients_path do %>
+			  <%= image_tag("volver.gif", :alt => 'Volver', :border => 0) %> Volver
+			<% end %> 
+		</td>
+	</tr>
+</table>

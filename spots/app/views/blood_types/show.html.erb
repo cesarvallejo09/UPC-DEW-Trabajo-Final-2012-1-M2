@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @blood_type.nombre %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @blood_type.descripcion %>
+</p>
+
+
+<%= link_to 'Edit', edit_blood_type_path(@blood_type) %> |
+<%= link_to 'Back', blood_types_path %>

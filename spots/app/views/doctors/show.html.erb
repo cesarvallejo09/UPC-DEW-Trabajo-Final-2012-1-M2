@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<table class="tabla_repeater">
+	<tr>
+		<th>Nombre: </th>
+		<td><%= @doctor.nombre %></td>
+	</tr>
+	<tr>
+		<th>Apellido: </th>
+		<td><%= @doctor.apellido %></td>
+	</tr>
+	<tr>
+		<th>Correo: </th>
+		<td><%= @doctor.correo %></td>
+	</tr>
+	<tr>
+		<th>Telefono: </th>
+		<td><%= @doctor.telefono %></td>
+	</tr>
+	<tr>
+		<th>Administrador </th>
+		<td><%= @doctor.administrador %></td>
+	</tr>		
+	<tr>
+		<th>Usuario: </th>
+		<td><%= @doctor.user %></td>
+	</tr>
+	<tr>
+		<td colspan= "2" align="center">
+			<%= link_to edit_doctor_path(@doctor) do %>
+			  <%= image_tag("b_edit.png", :alt => 'Editar doctor', :border => 0) %> Editar
+			<% end %> 
+			|			
+			<%= link_to doctors_path do %>
+			  <%= image_tag("volver.gif", :alt => 'Volver', :border => 0) %> Volver
+			<% end %> 
+		</td>
+	</tr>
+</table>

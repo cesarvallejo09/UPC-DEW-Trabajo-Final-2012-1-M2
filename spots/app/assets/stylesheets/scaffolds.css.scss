@@ -1,0 +1,133 @@
+/*************************************************************************************/
+/******************************* ETIQUETAS DIRECTAS **********************************/
+/*************************************************************************************/
+BODY {
+  FONT-SIZE: 12px;
+  FONT-FAMILY: Arial, Helvetica, sans-serif;
+  margin-bottom:10; 
+  margin-top:10; 
+  margin-left:10; 
+  margin-right:10;  
+  scrollbar-track-color: #F2F2F2;
+  scrollbar-base-color: #e0e0e0;
+  scrollbar-dark-shadow-color: #F2F2F2;
+  scrollbar-highlight-color: #F2F2F2;
+  scrollbar-3d-light-color: #F2F2F2;  
+  scrollbar-arrow-color: #000000;
+  scrollbar-face-color: #F2F2F2;
+  scrollbar-shadow-color: #F2F2F2;
+    
+  background-color: #E9E7E7;
+  margin:0px; 
+}
+BODY.bordecero {
+  margin-bottom:0; 
+  margin-top:0; 
+  margin-left:0; 
+  margin-right:0; 
+}
+A 
+{
+  COLOR: #003366;
+}
+A:hover
+{ 
+    color: #38C5FF;
+    text-decoration: none;
+}
+
+TABLE 
+{
+  BORDER-RIGHT: #e0e0e0 1px solid; 
+  BORDER-TOP: #e0e0e0 1px solid; 
+  BORDER-LEFT: #e0e0e0 1px solid;
+  BORDER-BOTTOM: #e0e0e0 1px solid;
+  FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+
+TH 
+{
+  FONT-SIZE: 11px;  
+  FONT-FAMILY: Arial, Helvetica, sans-serif;
+  COLOR: #FFFFFF; 
+  background-color: #727278;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+TD 
+{
+  FONT-SIZE: 11px;
+  FONT-FAMILY: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+}
+
+H1 {
+  COLOR: #727278;
+  text-align:center;
+  font-size:1.2em;
+  /*margin-bottom:5px */
+}
+
+
+H3 {
+  COLOR: #727278;
+  text-align:center;
+  font-size:1.2em;
+  /*margin-bottom:5px */
+}
+
+form 
+{
+  margin: 0px;
+  padding: 0px;
+}
+
+/*Desarrollado por César Vallejo*/
+table.tabla_repeater {
+  border: 1px solid #999;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 1em;
+  margin-left: auto;
+  background-color: White
+}
+
+/*Desarrollado por César Vallejo*/
+table.tabla_repeater td {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  color: #444;
+  border: 1px solid #eeeeee;    
+  font-size: 11px
+}
+
+/*Desarrollado por César Vallejo*/
+.color_fila_arriba {
+  background-color: White;
+}
+
+/*Desarrollado por César Vallejo*/
+.color_fila_abajo {
+  background-color: #38C5FF;
+}
+
+/*Desarrollado por César Vallejo*/
+.controles_texto {
+  border: 1px solid #cccccc;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #000000;
+  background-color: #F9F9F9;
+}
+
+/*Desarrollado por César Vallejo*/
+.link_button:hover
+{
+    color: #F9F9F9;
+    /*
+    cursor: hand;
+    text-decoration: none; */
+}
+

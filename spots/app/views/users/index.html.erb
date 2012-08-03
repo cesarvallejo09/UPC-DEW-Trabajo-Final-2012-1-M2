@@ -1,0 +1,35 @@
+<h1>Listing users</h1>
+
+<table class="tabla_repeater">
+  <tr>
+    <th>Nombre</th>
+    <th>Fecha inicio act</th>
+    <th>Correo</th>
+    <th>Clave</th>
+    <th>Activo</th>
+    <th>Comentario</th>
+    <th>Rol defecto</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @users.each do |user| %>
+  <tr>
+    <td><%= user.nombre %></td>
+    <td><%= user.fecha_inicio_act %></td>
+    <td><%= user.correo %></td>
+    <td><%= user.clave %></td>
+    <td><%= user.activo %></td>
+    <td><%= user.comentario %></td>
+    <td><%= user.rol_defecto %></td>
+    <td><%= link_to 'Show', user %></td>
+    <td><%= link_to 'Edit', edit_user_path(user) %></td>
+    <td><%= link_to 'Destroy', user, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New User', new_user_path %>

@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nombre:</b>
+  <%= @race.nombre %>
+</p>
+
+<p>
+  <b>Descripcion:</b>
+  <%= @race.descripcion %>
+</p>
+
+
+<%= link_to 'Edit', edit_race_path(@race) %> |
+<%= link_to 'Back', races_path %>

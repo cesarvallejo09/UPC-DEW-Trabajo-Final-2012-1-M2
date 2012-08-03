@@ -1,0 +1,62 @@
+<%= form_for(@patient) do |f| %>
+  <% if @patient.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@patient.errors.count, "error") %> prohibited this patient from being saved:</h2>
+
+      <ul>
+      <% @patient.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<table class="tabla_repeater">
+	<tr>
+	    <th><%= f.label :nombre %></th>
+	    <td><%= f.text_field :nombre %></td>
+	</tr>
+	<tr>
+    	<th>Especie</th>    
+		<td><%= f.collection_select :species_id, Species.all, :id, :nombre, :prompt => "--Seleccione--" %></td>
+	</tr>
+	<tr>
+	    <th>Raza</th>
+	    <td><%= f.collection_select :race_id, Race.all, :id, :nombre, :prompt => "--Seleccione--" %></td>
+	</tr>
+	<tr>
+	    <th><%= f.label :genero %></th>
+		<td><%= f.select :genero, %W(Macho Hembra).collect{|op| [op,op]}, :prompt => "--Seleccione--" %></td>	   	   
+	</tr>
+	<tr>
+	    <th>Tipo de sangre</th>
+		<td><%= f.collection_select :blood_type_id, BloodType.all, :id, :nombre, :prompt => "--Seleccione--" %></td>	   	   
+	</tr>
+	<tr>
+	    <th><%= f.label :esterilizado %></th>	    
+	    <td><%= f.select :esterilizado, %W(Si No).collect{|op| [op,op]}, :prompt => "--Seleccione--" %></td>
+	</tr>
+	<tr>
+	    <th><%= f.label :tamano %></th>
+	    <td><%= f.select :tamano, %W(Pequeno Mediano Grande).collect{|op| [op,op]}, :prompt => "--Seleccione--" %></td>
+	</tr>
+	<tr>
+	    <th><%= f.label :actividad %></th>
+	    <td><%= f.select :actividad, %W(Baja Media Alta).collect{|op| [op,op]}, :prompt => "--Seleccione--" %></td>
+	</tr>
+	<tr>
+	    <th><%= f.label :peso %></th>
+	    <td><%= f.text_field :peso %></td>
+	</tr>
+	<tr>
+	    <th><%= f.label :fecha_nac %></th>
+	    <td><%= f.date_select :fecha_nac %></td>
+	</tr>
+	<tr>
+	    <th><%= f.label :client %></th>
+	    <td><%= f.collection_select :client_id, Client.all, :id, :nombre, :prompt => true %></td>
+	</tr>
+	<tr>		
+		<td colspan="2" align="center"><%= f.submit %></td>
+	</tr>
+<% end %>

@@ -1,0 +1,31 @@
+<h1>Listing activities</h1>
+
+<table class="tabla_repeater">
+  <tr>
+    <th>Patient</th>
+    <th>Client</th>
+    <th>Tipo actividad</th>
+    <th>Fecha</th>
+    <th>Descripcion</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @activities.each do |activity| %>
+  <tr>
+    <td><%= activity.patient %></td>
+    <td><%= activity.client %></td>
+    <td><%= activity.tipo_actividad %></td>
+    <td><%= activity.fecha %></td>
+    <td><%= activity.descripcion %></td>
+    <td><%= link_to 'Show', activity %></td>
+    <td><%= link_to 'Edit', edit_activity_path(activity) %></td>
+    <td><%= link_to 'Destroy', activity, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Activity', new_activity_path %>

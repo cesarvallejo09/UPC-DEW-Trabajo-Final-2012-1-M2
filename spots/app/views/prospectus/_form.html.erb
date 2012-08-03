@@ -1,0 +1,50 @@
+<%= form_for(@prospectu) do |f| %>
+  <% if @prospectu.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@prospectu.errors.count, "error") %> prohibited this prospectu from being saved:</h2>
+
+      <ul>
+      <% @prospectu.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<table class="tabla_repeater">
+	<tr>
+		<th><%= f.label :nombre %></th>
+		<td><%= f.text_field :nombre %></td>
+	</tr>
+	<tr>
+		<th><%= f.label :apellido %></th>
+		<td><%= f.text_field :apellido %></td>
+	</tr>
+	<tr>
+		<th><%= f.label :nro_ruc %></th>
+		<td><%= f.text_field :nro_ruc %></td>
+	</tr>
+	<tr>
+		<th><%= f.label :correo %></th>
+		<td><%= f.text_field :correo %></td>
+	</tr>
+	<tr>
+		<th><%= f.label :direccion %></th>
+		<td><%= f.text_field :direccion %></td>
+	</tr>
+	<tr>
+		<th><%= f.label :imagen %></th>
+		<td><%= f.text_field :imagen %></td>
+	</tr>
+	<tr>
+		<th><%= f.label :telefono %></th>
+		<td><%= f.text_field :telefono %></td>
+	</tr>
+	<tr>
+		<th><%= f.label :celular %></th>
+		<td><%= f.text_field :celular %></td>
+	</tr>
+	<tr>		
+		<td colspan="2" align="center"><%= f.submit %></td>
+	</tr>
+<% end %>

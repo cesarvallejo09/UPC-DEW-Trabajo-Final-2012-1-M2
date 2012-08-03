@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<table class="tabla_repeater">
+	<tr>
+	  	<th>Especie: </th>
+		<td><%= @patient.species.nombre %></td>
+	</tr>
+	<tr>
+		<th>Raza: </th>
+		<td><%= @patient.race.nombre %></td>
+	</tr>
+	<tr>
+		<th>Genero: </th>
+		<td><%= @patient.genero %></td>
+	</tr>
+	<tr>
+		<th>Tipo de sangre: </th>
+		<td><%= @patient.blood_type.nombre %></td>
+	</tr>
+	<tr>
+		<th>Esterilizado: </th>
+		<td><%= @patient.esterilizado %></td>
+	</tr>
+	<tr>
+		<th>Tamano: </th>
+		<td><%= @patient.tamano %></td>
+	</tr>
+	<tr>
+		<th>Actividad: </th>
+		<td><%= @patient.actividad %></td>
+	</tr>
+	<tr>
+		<th>Peso: </th>
+		<td><%= @patient.peso %></td>
+	</tr>
+	<tr>
+		<th>Fecha nac: </th>
+		<td><%= @patient.fecha_nac %></td>
+	</tr>
+	<tr>
+		<td colspan= "2" align="center">
+			<%= link_to edit_patient_path(@patient) do %>
+			  <%= image_tag("b_edit.png", :alt => 'Editar paciente', :border => 0) %> Editar
+			<% end %> 
+			|			
+			<%= link_to patients_path do %>
+			  <%= image_tag("volver.gif", :alt => 'Volver', :border => 0) %> Volver
+			<% end %> 
+		</td>
+	</tr>
+</table>

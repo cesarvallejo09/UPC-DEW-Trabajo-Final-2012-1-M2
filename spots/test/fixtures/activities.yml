@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  patient: 
+  client: 
+  tipo_actividad: MyString
+  fecha: 2012-07-21
+  descripcion: MyString
+
+two:
+  patient: 
+  client: 
+  tipo_actividad: MyString
+  fecha: 2012-07-21
+  descripcion: MyString

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Sistema para Veterinarias - SPOTS</title>
+		<meta charset="UTF-8" />
+        <meta name="description" content="Sliding Background Image Menu with jQuery" />
+        <meta name="keywords" content="jquery, background image, image, menu, navigation, panels" />
+		<meta name="author" content="Codrops" />
+        <link rel="stylesheet" type="text/css" href="assets/style.css" />
+		<link rel="stylesheet" type="text/css" href="assets/sbimenu.css" />
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css' />
+		<link href='http://fonts.googleapis.com/css?family=News+Cycle&v1' rel='stylesheet' type='text/css' />
+
+    </head>
+    <body>
+		<div class="container">
+			<div class="header">
+				<h1>Sistema para Veterinarias<span>SPOTS</span></h1>							
+			</div>
+			<div class="content">
+				<div id="sbi_container" class="sbi_container">
+					<div class="sbi_panel" data-bg="assets/3.jpg">
+						<a href="#" class="sbi_label">Actividades</a>
+						<div class="sbi_content">
+							<ul>
+								<li><a href="#">Vacunas</a></li>
+								<li><a href="#">Tareas</a></li>
+							</ul>
+						</div>						
+					</div>
+					<div class="sbi_panel" data-bg="assets/4.jpg">
+						<a href="#" class="sbi_label">Mantenimientos</a>
+						<div class="sbi_content">
+							<ul>
+								<li><a href="doctors">Doctores</a></li>
+								<li><a href="prospectus">Prospectos</a></li>
+								<li><a href="clients">Clientes</a></li>
+								<li><a href="patients">Pacientes</a></li>
+								<li><a href="species">Especies</a></li>
+								<li><a href="races">Razas</a></li>
+								<li><a href="blood_types">Tipos de sangre</a></li>								
+								<li><a href="products">Productos</a></li>
+								<li><a href="users">Usuarios</a></li>
+								<li><a href="roles">Roles</a></li>								
+							</ul>
+						</div>						
+					</div>
+					<div class="sbi_panel" data-bg="assets/5.jpg">
+						<a href="#" class="sbi_label">Ventas</a>
+						<div class="sbi_content">
+							<ul>
+								<li><a href="#">Facturas</a></li>
+							</ul>
+						</div>						
+					</div>
+					<div class="sbi_panel" data-bg="assets/6.jpg">
+						<a href="#" class="sbi_label">Búsqueda</a>
+						<div class="sbi_content">
+							<ul>
+								<li><a href="#">Prospecto</a></li>
+								<li><a href="#">Cliente</a></li>
+								<li><a href="#">Paciente</a></li>
+							</ul>
+						</div>						
+					</div>
+				</div>
+			</div>
+			
+			<div class="more">
+				<ul>
+					<li> </li>
+					<li> </li>
+					<li> </li>
+					<li> </li>
+					<li> </li>
+					<li> </li>
+					<li> </li>
+					<li> </li>
+					<li> </li>
+					<li> </li>
+					<li> </li>
+					<li> </li>
+				</ul>
+			</div>
+						
+			<div class="topbar">
+				<a href="https://github.com/cesarvallejo09/UPC-DEW-Trabajo-Final-2012-1-M2"><span>&laquo; DESARROLLADO POR: </span>Francisco Alvarez | Claudia Masías | César Vallejo | Victor Virrueta</a>
+				<span class="right_ab">
+					<!--<a href="http://www.flickr.com/people/manoelpetry/" target="_blank">Photos by Manoel Petry</a>-->
+					<a href="javascript:history.back(-1)"><strong>volver al portal de SPOTS</strong></a>
+				</span>
+			</div>
+		</div>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+		<script type="text/javascript" src="assets/jquery.easing.1.3.js"></script>
+		<script type="text/javascript" src="assets/jquery.bgImageMenu.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('#sbi_container').bgImageMenu({
+					defaultBg	: 'assets/7.jpg',
+					menuSpeed	: 300,
+					border		: 10,
+					type		: {
+						mode		: 'verticalSlideAlt',
+						speed		: 250,
+						easing		: 'jswing',
+						seqfactor	: 100
+					}
+				});
+			});
+		</script>
+    </body>
+</html>

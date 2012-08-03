@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<table class="tabla_repeater">
+	<tr>
+		<th>Nombre: </th>
+		<td><%= @prospectu.nombre %></td>		
+	</tr>
+	<tr>
+		<th>Apellido:</th>
+		<td><%= @prospectu.apellido %></td>		
+	</tr>
+	<tr>
+		<th>Nro ruc:</th>
+		<td><%= @prospectu.nro_ruc %></td>		
+	</tr>
+	<tr>
+		<th>Correo:</th>
+		<td><%= @prospectu.correo %></td>		
+	</tr>
+	<tr>
+		<th>Direccion:</th>
+		<td><%= @prospectu.direccion %></td>		
+	</tr>
+	<tr>
+		<th>Imagen:</th>
+		<td><%= @prospectu.imagen %></td>		
+	</tr>		
+	<tr>
+		<th>Telefono:</th>
+		<td><%= @prospectu.telefono %></td>		
+	</tr>	
+	<tr>
+		<th>Celular:</th>
+		<td><%= @prospectu.celular %></td>		
+	</tr>
+	<tr>
+		<td colspan= "2" align="center">
+			<%= link_to edit_prospectu_path(@prospectu) do %>
+			  <%= image_tag("b_edit.png", :alt => 'Editar prospecto', :border => 0) %> Editar
+			<% end %> 
+			|			
+			<%= link_to prospectus_path do %>
+			  <%= image_tag("volver.gif", :alt => 'Volver', :border => 0) %> Volver
+			<% end %> 
+		</td>
+	</tr>
+</table>

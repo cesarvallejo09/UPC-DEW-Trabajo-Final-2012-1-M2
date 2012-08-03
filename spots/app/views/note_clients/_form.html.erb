@@ -1,0 +1,29 @@
+<%= form_for(@note_client) do |f| %>
+  <% if @note_client.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@note_client.errors.count, "error") %> prohibited this note_client from being saved:</h2>
+
+      <ul>
+      <% @note_client.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :client %><br />
+    <%= f.text_field :client %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha %><br />
+    <%= f.date_select :fecha %>
+  </div>
+  <div class="field">
+    <%= f.label :comentario %><br />
+    <%= f.text_field :comentario %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

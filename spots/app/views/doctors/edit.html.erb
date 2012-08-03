@@ -1,0 +1,11 @@
+<h3>Editar doctor</h3>
+
+<%= link_to @doctor do %>
+  <%= image_tag("b_browse.png", :alt => 'Mostrar detalle de doctor', :border => 0) %> Mostrar
+<% end %> 
+|
+<%= link_to doctors_path do %>
+  <%= image_tag("volver.gif", :alt => 'Volver', :border => 0) %> Volver
+<% end %> 	
+
+<%= render 'form' %>
