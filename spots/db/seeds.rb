@@ -22,6 +22,7 @@ BloodType.create(nombre: 'A-', descripcion: 'A-')
 
 Doctor.create(nombre: 'Alexis Reynaldo', apellido: 'Nombera Casas', correo: 'anombera@gmail.com', telefono: '014865959', administrador: 'SI', user: 'anombera')
 Doctor.create(nombre: 'Gary Sait', apellido: 'Baez Zabala', correo: 'gzabala@hotmail.com', telefono: '013870851', administrador: 'NO', user: 'gzabala')
+Doctor.create(nombre: 'Jhon Hector', apellido: 'Marcelo Florian', correo: 'jmarcelo@hotmail.com', telefono: '014580023', administrador: 'SI', user: 'jmarcelo')
 
 
   
