@@ -19,3 +19,8 @@ Species.create(nombre: 'Felino', descripcion: 'Felino')
 
 BloodType.create(nombre: 'A+', descripcion: 'A+')
 BloodType.create(nombre: 'A-', descripcion: 'A-')
+
+Doctor.create(nombre: 'Alexis Reynaldo', apellido: 'Nombera Casas', correo: 'anombera@gmail.com', telefono: '014865959', administrador: 'SI', user: 'anombera')
+
+
+  
