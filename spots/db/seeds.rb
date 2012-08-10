@@ -22,6 +22,7 @@ Race.create(nombre: 'Cocker', descripcion: 'Spaniel')
 Race.create(nombre: 'Boxer', descripcion: 'Germany')
 Race.create(nombre: 'Doberman', descripcion: 'Pinscher puppies')
 Race.create(nombre: 'Pastor', descripcion: 'Aleman')
+Race.create(nombre: 'Shitzu', descripcion: 'Shitzu')
 
 Species.create(nombre: 'Canino', descripcion: 'Canino')
 Species.create(nombre: 'Felino', descripcion: 'Felino')
