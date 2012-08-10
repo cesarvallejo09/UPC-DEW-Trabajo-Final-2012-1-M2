@@ -39,11 +39,14 @@ ActiveRecord::Schema.define(:version => 20120721080638) do
     t.string   "nro_ruc"
     t.string   "correo"
     t.string   "direccion"
-    t.string   "imagen"
+    t.string   "imagen_file_name"
+    t.string   "imagen_content_type"
+    t.integer  "imagen_file_size"
+    t.datetime "imagen_updated_at"
     t.string   "telefono"
     t.string   "celular"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
   end
 
   create_table "doctors", :force => true do |t|
@@ -112,11 +115,14 @@ ActiveRecord::Schema.define(:version => 20120721080638) do
     t.string   "nro_ruc"
     t.string   "correo"
     t.string   "direccion"
-    t.string   "imagen"
+    t.string   "imagen_file_name"
+    t.string   "imagen_content_type"
+    t.integer  "imagen_file_size"
+    t.datetime "imagen_updated_at"
     t.string   "telefono"
     t.string   "celular"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
   end
 
   create_table "races", :force => true do |t|

@@ -6,7 +6,7 @@ class CreateProspectus < ActiveRecord::Migration
       t.string :nro_ruc
       t.string :correo
       t.string :direccion
-      t.string :imagen
+      t.has_attached_file :imagen
       t.string :telefono
       t.string :celular
 

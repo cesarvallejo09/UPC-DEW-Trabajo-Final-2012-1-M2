@@ -1,4 +1,4 @@
-<h3>Listado de clientes</h3>
+<h3>Listado de Clientes</h3>
 
 <%= link_to new_client_path do %>
   <%= image_tag("agregar.gif", :alt => 'Nuevo cliente', :border => 0) %> Nuevo cliente
@@ -24,7 +24,7 @@
     <td><%= client.nro_ruc %></td>
     <td><%= client.correo %></td>
     <td><%= client.direccion %></td>
-    <td><%= client.imagen %></td>
+    <td><%= image_tag client.imagen.url(:thumb) %></td>    
     <td><%= client.telefono %></td>
     <td><%= client.celular %></td>
     

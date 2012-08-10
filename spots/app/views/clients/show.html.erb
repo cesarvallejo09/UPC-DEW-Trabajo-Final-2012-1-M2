@@ -23,7 +23,7 @@
 	</tr>
 	<tr>
 		<th>Imagen:</th>
-		<td><%= @client.imagen %></td>		
+		<td><%= image_tag @client.imagen.url(:medium) %></td>		
 	</tr>		
 	<tr>
 		<th>Telefono:</th>

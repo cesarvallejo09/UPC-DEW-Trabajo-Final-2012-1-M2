@@ -24,7 +24,7 @@
     <td><%= prospectu.nro_ruc %></td>
     <td><%= prospectu.correo %></td>
     <td><%= prospectu.direccion %></td>
-    <td><%= prospectu.imagen %></td>
+    <td><%= image_tag prospectu.imagen.url(:thumb) %></td>
     <td><%= prospectu.telefono %></td>
     <td><%= prospectu.celular %></td>    	    
 

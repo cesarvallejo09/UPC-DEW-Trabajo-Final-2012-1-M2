@@ -1,4 +1,4 @@
-<%= form_for(@prospectu) do |f| %>
+<%= form_for(@prospectu, :html => { :multipart => true }) do |f| %>
   <% if @prospectu.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@prospectu.errors.count, "error") %> prohibited this prospectu from being saved:</h2>
@@ -34,8 +34,9 @@
 	</tr>
 	<tr>
 		<th><%= f.label :imagen %></th>
-		<td><%= f.text_field :imagen %></td>
-	</tr>
+		<td><%= f.file_field :imagen %><br>
+		    <%= image_tag @prospectu.imagen.url(:thumb) %></td>
+	</tr>	
 	<tr>
 		<th><%= f.label :telefono %></th>
 		<td><%= f.text_field :telefono %></td>
@@ -43,7 +44,7 @@
 	<tr>
 		<th><%= f.label :celular %></th>
 		<td><%= f.text_field :celular %></td>
-	</tr>
+	</tr>	
 	<tr>		
 		<td colspan="2" align="center"><%= f.submit %></td>
 	</tr>
