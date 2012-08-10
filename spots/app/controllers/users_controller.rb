@@ -80,4 +80,11 @@ class UsersController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  map.user_root '/users', :controller => 'users' # creates user_root_path
+  
+  map.namespace :user do |user|
+    user.root :controller => 'users' # creates user_root_path
+  end
+  
 end

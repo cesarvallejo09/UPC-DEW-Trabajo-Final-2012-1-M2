@@ -39,5 +39,5 @@ Spots::Application.configure do
   Paperclip.options[:command_path] = "C:/ImageMagick"
   
   # Configuraciòn Devise
-  config.action_mailer.default_url_options = { :host => 'localhost:3000/spots' }
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 end

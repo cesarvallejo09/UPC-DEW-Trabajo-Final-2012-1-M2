@@ -11,9 +11,12 @@ class Prospectu < ActiveRecord::Base
     attr_accessible :imagen
     has_attached_file :imagen, :styles => { :medium => "300x300>", :thumb => "100x100>" },
                       :url => "/assets/prospectus/:id/:style/:basename.:extension",
-                      :path => ":rails_root/public/assets/prospectus/:id/:style/:basename.:extension"
-                  
-    validates_attachment_presence :imagen
+                      :path => ":rails_root/public/assets/prospectus/:id/:style/:basename.:extension",
+                      :default_url => '/assets/photo.png'
+                                                     
     validates_attachment_size :imagen, :less_than => 5.megabytes
-    validates_attachment_content_type :imagen, :content_type => ['image/jpeg', 'image/png']
+
+    # image/pjpeg: Validaciòn para IE8
+    # Fuente: http://stackoverflow.com/questions/6488437/paperclip-photo-upload-fails-in-ie8
+    validates_attachment_content_type :imagen, :content_type => ['image/jpg','image/jpeg', 'image/png', 'image/tiff', 'image/gif', 'image/pjpeg']         
 end
