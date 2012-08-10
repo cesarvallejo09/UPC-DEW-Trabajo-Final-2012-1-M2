@@ -35,5 +35,9 @@ Spots::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = true
   
+  # Configuraciòn Paperclip
   Paperclip.options[:command_path] = "C:/ImageMagick"
+  
+  # Configuraciòn Devise
+  config.action_mailer.default_url_options = { :host => 'localhost:3000/spots' }
 end

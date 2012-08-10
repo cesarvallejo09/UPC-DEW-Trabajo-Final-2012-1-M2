@@ -38,6 +38,8 @@ module Spots
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+    # Configuraciòn Devise
+    config.secret_token = '6eead34d5a818284c1df53a679d0da8b7b025ab937794f0dc4a0b361294219f8985f77a679993cbf58dec831335a018dae510d4c6415eb0738752457ce9055d0'
 
     # Use SQL instead of Active Record's schema dumper when creating the database.
     # This is necessary if your schema can't be completely dumped by the schema dumper,
