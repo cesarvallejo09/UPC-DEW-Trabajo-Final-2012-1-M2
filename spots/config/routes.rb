@@ -1,4 +1,8 @@
 Spots::Application.routes.draw do
+  resources :invoice_products
+
+  resources :invoices
+
   # devise_for :users
 
   devise_for :users do

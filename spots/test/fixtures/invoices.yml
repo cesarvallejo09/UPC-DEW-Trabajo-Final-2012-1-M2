@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  fecha: 2012-08-11
+  subtotal: 9.99
+  igv: 9.99
+  total: 
+
+two:
+  fecha: 2012-08-11
+  subtotal: 9.99
+  igv: 9.99
+  total: 

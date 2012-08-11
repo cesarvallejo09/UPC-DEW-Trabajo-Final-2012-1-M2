@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Fecha:</b>
+  <%= @invoice.fecha %>
+</p>
+
+<p>
+  <b>Subtotal:</b>
+  <%= @invoice.subtotal %>
+</p>
+
+<p>
+  <b>Igv:</b>
+  <%= @invoice.igv %>
+</p>
+
+<p>
+  <b>Total:</b>
+  <%= @invoice.total %>
+</p>
+
+
+<%= link_to 'Edit', edit_invoice_path(@invoice) %> |
+<%= link_to 'Back', invoices_path %>
