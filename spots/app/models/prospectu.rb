@@ -18,5 +18,19 @@ class Prospectu < ActiveRecord::Base
 
     # image/pjpeg: Validaciòn para IE8
     # Fuente: http://stackoverflow.com/questions/6488437/paperclip-photo-upload-fails-in-ie8
-    validates_attachment_content_type :imagen, :content_type => ['image/jpg','image/jpeg', 'image/png', 'image/tiff', 'image/gif', 'image/pjpeg']         
+    validates_attachment_content_type :imagen, :content_type => ['image/jpg','image/jpeg', 'image/png', 'image/tiff', 'image/gif', 'image/pjpeg']
+    
+  validates :nombre, presence: true, length: {:maximum => 50}
+  validates :apellido, presence: true, length: {:maximum => 50}
+  validates :nro_ruc, presence: true, length: {:maximum => 11}
+  validates :correo, presence: true, length: {:maximum => 50}
+  validates :direccion, presence: true, length: {:maximum => 100}
+  validates :telefono, presence: true, length: {:maximum => 20}
+  validates :celular, presence: true, length: {:maximum => 20}
+  
+  validates_uniqueness_of :nro_ruc, :message => "El número de RUC se encuentra asignado a otro prospecto."
+  validates_uniqueness_of :correo, :message => "El correo se encuentra asignado a otro prospecto."
+  validates_uniqueness_of :telefono, :message => "El telefono se encuentra asignado a otro prospecto."
+  validates_uniqueness_of :celular, :message => "El número de celular se encuentra asignado a otro prospecto."    
+  validates_uniqueness_of :nombre, :scope => [:nro_ruc, :correo, :telefono, :celular], :message => "El prospecto que intenta registrar, ya existe."             
 end

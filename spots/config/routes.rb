@@ -27,13 +27,15 @@ Spots::Application.routes.draw do
 
   root :to => "webs#index"
   
+  match "spots" => "webs#spots"
+  
   resources :prospectus
 
   resources :doctors
 
   resources :patients
 
-  resources :clients
+  resources :clients  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
