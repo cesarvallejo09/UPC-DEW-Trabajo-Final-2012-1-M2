@@ -1,7 +1,11 @@
 <h3>Listado de Prospectos</h3>
 
 <%= link_to new_prospectu_path do %>
-  <%= image_tag("agregar.gif", :alt => 'Nuevo prospecto', :border => 0) %> Nuevo prospecto
+  <%= image_tag("agregar.gif", :alt => 'Nuevo prospecto', :border => 0) %> Nuevo prospecto  
+<% end %>
+|
+<%= link_to spots_path do %>
+  <%= image_tag("volver.gif", :alt => 'Volver', :border => 0) %> Volver
 <% end %>
 		
 <table class="tabla_repeater">
