@@ -11,19 +11,21 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :client %><br />
-    <%= f.text_field :client %>
-  </div>
-  <div class="field">
-    <%= f.label :fecha %><br />
-    <%= f.date_select :fecha %>
-  </div>
-  <div class="field">
-    <%= f.label :comentario %><br />
-    <%= f.text_field :comentario %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<table>
+	<tr>
+	    <th><%= f.label :client %></th>
+	    <td><%= f.collection_select :client_id, Client.all, :id, :nombre, :prompt => true %></td>
+	</tr> 	
+	<tr>
+	    <th><%= f.label :fecha %></th>
+	    <td><%= f.date_select :fecha %></td>
+	</tr> 	
+	<tr>
+	    <th><%= f.label :comentario %></th>
+	    <td><%= f.text_field :comentario %></td>
+	</tr> 
+	<tr>		
+		<td colspan="2" align="center"><%= f.submit %></td>
+	</tr>		
+</table>
 <% end %>

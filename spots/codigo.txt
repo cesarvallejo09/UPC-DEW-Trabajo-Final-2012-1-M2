@@ -1,0 +1,13 @@
+	<!--
+	<tr>
+		<th>Notas del cliente: </th>
+		<td>
+			<ul>
+			  <%# @client.noteclients.each do |note_client| %>
+			  <li><%= #note_client.fecha %></li>
+			  <li><%= #note_client.comentario %></li>
+			  <%#end%>
+			</ul>
+		</td>
+	</tr>
+	-->	

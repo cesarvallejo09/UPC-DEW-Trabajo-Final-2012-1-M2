@@ -1,5 +1,6 @@
 class Client < ActiveRecord::Base
   has_many :patients
+  has_many :noteclients
   
   attr_accessible :nombre
   attr_accessible :apellido

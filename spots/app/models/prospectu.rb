@@ -28,9 +28,9 @@ class Prospectu < ActiveRecord::Base
   validates :telefono, presence: true, length: {:maximum => 20}
   validates :celular, presence: true, length: {:maximum => 20}
   
-  validates_uniqueness_of :nro_ruc, :message => "El número de RUC se encuentra asignado a otro prospecto."
+  validates_uniqueness_of :nro_ruc, :message => "El numero de RUC se encuentra asignado a otro prospecto."
   validates_uniqueness_of :correo, :message => "El correo se encuentra asignado a otro prospecto."
   validates_uniqueness_of :telefono, :message => "El telefono se encuentra asignado a otro prospecto."
-  validates_uniqueness_of :celular, :message => "El número de celular se encuentra asignado a otro prospecto."    
+  validates_uniqueness_of :celular, :message => "El numero de celular se encuentra asignado a otro prospecto."    
   validates_uniqueness_of :nombre, :scope => [:nro_ruc, :correo, :telefono, :celular], :message => "El prospecto que intenta registrar, ya existe."             
 end

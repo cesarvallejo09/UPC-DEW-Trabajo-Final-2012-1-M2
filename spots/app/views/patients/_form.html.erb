@@ -55,7 +55,7 @@
 	</tr>
 	<tr>
 	    <th><%= f.label :fecha_nac %></th>
-	    <td><%= f.text_field :fecha_nac %></td>
+	    <td><%= f.date_select :fecha_nac %></td>
 	</tr>
 	<tr>
 	    <th><%= f.label :client %></th>
@@ -64,4 +64,5 @@
 	<tr>		
 		<td colspan="2" align="center"><%= f.submit %></td>
 	</tr>
+</table>	
 <% end %>
