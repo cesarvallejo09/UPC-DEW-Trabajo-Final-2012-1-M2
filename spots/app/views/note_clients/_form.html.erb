@@ -11,7 +11,7 @@
     </div>
   <% end %>
 
-<table>
+<table class="tabla_repeater">
 	<tr>
 	    <th><%= f.label :client %></th>
 	    <td><%= f.collection_select :client_id, Client.all, :id, :nombre, :prompt => true %></td>
