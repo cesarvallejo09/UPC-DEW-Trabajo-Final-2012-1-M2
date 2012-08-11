@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<table class="tabla_repeater">
+	<tr>
+		<th>Fecha: </th>
+		<td><%= @invoice.fecha %></td>		
+	</tr>
+	<tr>
+		<th>Subtotal:</th>
+		<td><%= @invoice.subtotal %></td>		
+	</tr>
+	<tr>
+		<th>IGV:</th>
+		<td><%= @invoice.igv %></td>		
+	</tr>
+	<tr>
+		<th>Total:</th>
+		<td><%= @invoice.total %></td>		
+	</tr>
+
+	<tr>
+		<th>Lista de productos: </th>
+		<td>
+			<ul>
+			  <% @invoice.products.each do |product| %>
+			  <li>Producto: <%= product.nombre %> | Precio <%= product.precio %> </li>
+			  <%end%>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<td colspan= "2" align="center">
+			<%= link_to edit_invoice_path(@invoice) do %>
+			  <%= image_tag("b_edit.png", :alt => 'Editar factura', :border => 0) %> Editar
+			<% end %> 
+			|			
+			<%= link_to invoices_path do %>
+			  <%= image_tag("volver.gif", :alt => 'Volver', :border => 0) %> Volver
+			<% end %> 
+		</td>
+	</tr>
+</table>
