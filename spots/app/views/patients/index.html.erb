@@ -6,7 +6,8 @@
 		
 <table class="tabla_repeater">
   <tr>
-    <th>Nombre</th>  
+    <th>Nombre</th>
+    <th>Foto</th>  
     <th>Especie</th>
     <th>Raza</th>
     <th>Genero</th>
@@ -23,6 +24,7 @@
 <% @patients.each do |patient| %>
   <tr>
     <td><%= patient.nombre %></td>
+    <td><%= image_tag patient.imagen.url(:thumb) %></td>
     <td><%= patient.species.nombre %></td>	
     <td><%= patient.race.nombre %></td>
     <td><%= patient.genero %></td>

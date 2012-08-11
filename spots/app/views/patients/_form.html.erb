@@ -17,6 +17,11 @@
 	    <td><%= f.text_field :nombre %></td>
 	</tr>
 	<tr>
+		<th>Foto: </th>
+		<td><%= f.file_field :imagen %><br>
+		    <%= image_tag @patient.imagen.url(:thumb) %></td>
+	</tr>	
+	<tr>
     	<th>Especie</th>    
 		<td><%= f.collection_select :species_id, Species.all, :id, :nombre, :prompt => "--Seleccione--" %></td>
 	</tr>

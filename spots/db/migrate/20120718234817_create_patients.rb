@@ -2,6 +2,7 @@ class CreatePatients < ActiveRecord::Migration
   def self.up
     create_table :patients do |t|
       t.string :nombre
+      t.has_attached_file :imagen
       t.references :species
       t.references :race
       t.string :genero

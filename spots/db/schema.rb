@@ -82,6 +82,10 @@ ActiveRecord::Schema.define(:version => 20120810204936) do
 
   create_table "patients", :force => true do |t|
     t.string   "nombre"
+    t.string   "imagen_file_name"
+    t.string   "imagen_content_type"
+    t.integer  "imagen_file_size"
+    t.datetime "imagen_updated_at"
     t.integer  "species_id"
     t.integer  "race_id"
     t.string   "genero"
@@ -92,8 +96,8 @@ ActiveRecord::Schema.define(:version => 20120810204936) do
     t.decimal  "peso"
     t.date     "fecha_nac"
     t.integer  "client_id"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
   end
 
   add_index "patients", ["blood_type_id"], :name => "index_patients_on_blood_type_id"

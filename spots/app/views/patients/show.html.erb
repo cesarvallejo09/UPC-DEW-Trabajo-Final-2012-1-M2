@@ -2,6 +2,14 @@
 
 <table class="tabla_repeater">
 	<tr>
+		<th>Nombre: </th>
+		<td><%= @patient.nombre %></td>
+	</tr>	
+	<tr>
+		<th>Foto: </th>
+		<td><%= image_tag @patient.imagen.url(:medium) %></td>		
+	</tr>		
+	<tr>
 	  	<th>Especie: </th>
 		<td><%= @patient.species.nombre %></td>
 	</tr>
@@ -34,7 +42,7 @@
 		<td><%= @patient.peso %></td>
 	</tr>
 	<tr>
-		<th>Fecha nac: </th>
+		<th>Fecha Nacim.: </th>
 		<td><%= @patient.fecha_nac %></td>
 	</tr>
 	<tr>
