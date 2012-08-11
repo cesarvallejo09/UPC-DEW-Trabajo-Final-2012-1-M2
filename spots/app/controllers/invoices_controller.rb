@@ -1,6 +1,10 @@
 class InvoicesController < ApplicationController
   # GET /invoices
   # GET /invoices.json
+  def add_product
+	@invoice = Invoice.find(params[:id])
+  end
+
   def index
     @invoices = Invoice.all
 

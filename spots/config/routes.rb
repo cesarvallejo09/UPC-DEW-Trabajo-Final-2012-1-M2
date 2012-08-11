@@ -1,4 +1,11 @@
 Spots::Application.routes.draw do
+
+  resources :invoices do
+	member do
+		get "add_product"
+	end
+  end
+  
   resources :invoice_products
 
   resources :invoices

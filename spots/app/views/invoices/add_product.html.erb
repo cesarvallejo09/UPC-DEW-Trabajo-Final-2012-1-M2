@@ -1,0 +1,5 @@
+<h2>Factura: <%= @invoice.id %> </h2>
+<%= simple_form_for(@invoice) do |f| %>
+	<%= f.association :products, :as => "check_boxes" %> <br />
+	<%= f.button :submit %>
+<% end %>

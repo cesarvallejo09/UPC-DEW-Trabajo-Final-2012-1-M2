@@ -1,5 +1,7 @@
-<h1>New invoice</h1>
+<h3>Nueva factura</h3>
+
+<%= link_to invoices_path do %>
+  <%= image_tag("volver.gif", :alt => 'Volver', :border => 0) %> Volver
+<% end %> 
 
 <%= render 'form' %>
-
-<%= link_to 'Back', invoices_path %>
